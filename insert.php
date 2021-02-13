@@ -77,7 +77,7 @@ if($status==false){
 }else{
     // item.phpへリダイレクト（!!Location: 半角スペース注意!!）
     // exitも忘れず!!
-    header("Location: item.php");
+    header("Location: index.php");
     exit;
 }
 ?>
