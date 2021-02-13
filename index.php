@@ -45,6 +45,13 @@ function getItems( $query ){
             $view .=       '<li class="item-contents-lower">';
             $view .=          '<p class="products-text item-price">¥'.$res['number'].'</p>';
             $view .=       '</li>';
+            $view .=       '<li class="item-contents-buttons">';
+            $view .=          '<a href="#" class="btn-update">編集</a>';
+            $view .=          '<form action="delete.php" method="post">';
+            $view .=             '<input class="btn-delete admin" type="submit" value="削除">';
+            $view .=             '<input type="hidden" name="id" value="'.$res['id'].'">';
+            $view .=          '</form>';
+            $view .=       '</li>';
             $view .=     '</ul>';
             $view .= '</a>';
             $view .= '</div>';
