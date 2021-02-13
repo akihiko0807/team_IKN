@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `ec_user_table`
 --
 
-CREATE TABLE `ec_user_table` (
+CREATE TABLE `login_user_table` (
   `id` int(12) NOT NULL,
   `u_name` varchar(128) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `u_id` varchar(64) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -45,7 +45,7 @@ INSERT INTO `ec_user_table` (`id`, `u_name`, `u_id`, `u_pw`, `is_admin`, `indate
 --
 -- Indexes for table `ec_user_table`
 --
-ALTER TABLE `ec_user_table`
+ALTER TABLE `login_user_table`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -55,5 +55,5 @@ ALTER TABLE `ec_user_table`
 --
 -- AUTO_INCREMENT for table `ec_user_table`
 --
-ALTER TABLE `ec_user_table`
+ALTER TABLE `login_user_table`
   MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;

@@ -26,7 +26,7 @@ try{
 //-------------------------------------------
 // 4. データ削除SQL作成 
 //-------------------------------------------
-$stmt = $pdo->prepare("DELETE FROM ec_table WHERE id = :id;");
+$stmt = $pdo->prepare("DELETE FROM member_profile_table WHERE id = :id;");
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute();
 

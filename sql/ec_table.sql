@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `ec_table`
 --
 
-CREATE TABLE `ec_table` (
+CREATE TABLE `member_profile_table` (
   `id` int(12) NOT NULL,
   `item` varchar(64) NOT NULL,
   `category` varchar(64) DEFAULT NULL,
@@ -34,7 +34,7 @@ CREATE TABLE `ec_table` (
 -- Dumping data for table `ec_table`
 --
 
-INSERT INTO `ec_table` (`id`, `item`, `category`, `value`, `description`, `fname`, `indate`) VALUES
+INSERT INTO `member_profile_table` (`id`, `item`, `category`, `value`, `description`, `fname`, `indate`) VALUES
 (3, '僕ビール君ビール', 'Saison', 350, 'レモンやマスカット、ハーブを思わせる軽快な香りと、スッと抜ける爽やかな苦み。アルコール度数は4.5%に抑え、軽快な飲み口が特徴のビールです。こんなビールもあったのかと、イメージががらりと変わる、新しいクラフトビール体験をお楽しみください。', 'bokukimi.jpg', '2021-01-09 01:04:31'),
 (4, 'HAZY JANE', 'Hazy IPA', 650, 'ドライホッピングによるパイナップルやマンゴー、フレッシュライムの鮮やかな香りに、松のニュアンス。\r\n\r\nそして、モルト由来のジューシーなオレンジのアロマが後味に現れます。\r\n\r\nこの濃密な完熟フルーツフレーバーが、強い苦味やアルコール感をバランスよくまとめあげ、何杯でも飲めてしまうスムースな味わいに仕上がっています。', 'brewdog-hazyjane.jpg', '2021-01-09 01:05:46'),
 (5, 'Brewdog PALE ALE', 'Pale Ale', 600, 'ホップの聖地、米国西海岸産のホップが生み出す柑橘や松の鮮烈なアロマ、そして爽快な苦味。クラフトビールファンも納得のホッピーテイストですが、アルコール度を抑えた軽快な味わいは、飲み慣れないビギナーにもぴったり。\r\n商品名に初めてブルワリー名を冠した渾身のペールエールをお楽しみください。', 'brewdog-paleale.jpg', '2021-01-09 01:07:11'),
@@ -70,7 +70,7 @@ INSERT INTO `ec_table` (`id`, `item`, `category`, `value`, `description`, `fname
 --
 -- Indexes for table `ec_table`
 --
-ALTER TABLE `ec_table`
+ALTER TABLE `member_profile_table`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -80,5 +80,5 @@ ALTER TABLE `ec_table`
 --
 -- AUTO_INCREMENT for table `ec_table`
 --
-ALTER TABLE `ec_table`
+ALTER TABLE `member_profile_table`
   MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
