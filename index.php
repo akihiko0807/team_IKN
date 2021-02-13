@@ -54,11 +54,7 @@ function getItems( $query ){
 }
 
 if( !isset($_SESSION["results"])||$_SESSION["results"] != "" ){
-<<<<<<< HEAD
-    $view = getItems( "SELECT * FROM ec_table" );
-=======
     $view = getItems( "SELECT * FROM member_profile_table" );
->>>>>>> 5d3bc7c24536b983f14d705a0872cddf49ad6ffd
 }else{
     $view = $_SESSION["results"];
     $_SESSION["results"] = "";
@@ -114,21 +110,12 @@ if($status==false){
     <header class="header">
         <div class="header__flex">
             <div class="div-top-logo"><a href="./index.php"><img 
-<<<<<<< HEAD
-            src="./img/common/site-logo.png" class="fig-site-logo" alt="Taco's Beer Market"></a>
-            </div>
-            <div class="site-title">
-                <h1>オーナー選りすぐりのクラフトビール</h1>
-                <br>
-                <p class="site-subtitle">~日常の食卓に、ちょっと贅沢を~</p>
-=======
             src="./img/gslogo.jpg" class="fig-site-logo" alt="G's logo 画像"></a>
             </div>
             <div class="site-title">
                 <h1>G's Members</h1>
                 <br>
                 <p class="site-subtitle">DEV-18</p>
->>>>>>> 5d3bc7c24536b983f14d705a0872cddf49ad6ffd
             </div>
             <nav>
                 <ul>
@@ -140,17 +127,6 @@ if($status==false){
                             </a>
                         </div>
                     </li>
-<<<<<<< HEAD
-                    <li id="cart">
-                        <div class="header-menu">
-                            <a href="./cart.php">
-                            <img src="./img/common/cart.png" class="fig-header-menu">
-                            <p class="header-menu-text">カート</p>
-                            </a>
-                        </div>
-                    </li>
-=======
->>>>>>> 5d3bc7c24536b983f14d705a0872cddf49ad6ffd
                     <li id="login_user">
                         <div class="header-menu">
                         <img src="./img/common/user-icon.png" class="fig-header-menu" alt="ログイン">
@@ -163,10 +139,6 @@ if($status==false){
     <!--end header-->
 
     <div class="outer">
-<<<<<<< HEAD
-        <div class="side-menu">
-=======
->>>>>>> 5d3bc7c24536b983f14d705a0872cddf49ad6ffd
             <div class="side-menu-filter-list">
                 <h2 class="side-menu-title">カテゴリ</h2>
                 <form name="form_filter" action="./select.php" method="post">
@@ -218,11 +190,7 @@ if($status==false){
 
 <!--footer -->
 <footer class="footer">
-<<<<<<< HEAD
-    <p class="copyrights"><small>Copyrights Studio TACO All Rights Reserved.</small></p>
-=======
     <p class="copyrights"><small>Copyrights Team IKN All Rights Reserved.</small></p>
->>>>>>> 5d3bc7c24536b983f14d705a0872cddf49ad6ffd
 </footer>
 <!-- end footer-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
