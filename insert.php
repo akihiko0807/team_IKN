@@ -2,23 +2,27 @@
 //------------------------------------------
 // 1. 入力チェック
 //------------------------------------------
-//商品名 受信チェック:item
-if(!isset($_POST["item"]) || $_POST["item"]==""){
+// registration.phpから飛んでくるのは、name, history, number, goal , fname
+//受信チェック:name
+if(!isset($_POST["name"]) || $_POST["name"]==""){
     exit("Param Error!: item");
 }
-//商品名 受信チェック:category
-if(!isset($_POST["category"]) || $_POST["category"]==""){
-    exit("Param Error!: category");
+//受信チェック:学生番号
+if(!isset($_POST["number"]) || $_POST["number"]==""){
+    exit("Param Error!: number");
 }
-//金額 受信チェック:value
-if(!isset($_POST["value"]) || $_POST["value"]==""){
-    exit("Param Error!: value");
+//受信チェック:history
+if(!isset($_POST["history"]) || $_POST["history"]==""){
+    exit("Param Error!: history");
 }
-//金額 受信チェック:description
-if(!isset($_POST["description"]) || $_POST["description"]==""){
-    exit("Param Error!: description");
+//受信チェック:goal
+if(!isset($_POST["goal"]) || $_POST["goal"]==""){
+    exit("Param Error!: goal");
 }
-
+//受信チェック:likes
+if(!isset($_POST["likes"]) || $_POST["likes"]==""){
+    exit("Param Error!: likes");
+}
 //ファイル受信チェック 受信チェック ※$_FILES["*****"]["name"]の場合
 if(!isset($_FILES["fname"]["name"]) || $_FILES["fname"]["name"]==""){
     exit("Param Error!: files");
@@ -28,10 +32,11 @@ if(!isset($_FILES["fname"]["name"]) || $_FILES["fname"]["name"]==""){
 // 2. POSTデータ取得
 //------------------------------------------
 $fname = $_FILES["fname"]["name"]; //ファイル名
-$item = $_POST["item"]; //商品名
-$category = $_POST["category"]; //カテゴリ
-$value = $_POST["value"]; //価格
-$description = $_POST["description"]; //商品紹介文
+$name = $_POST["name"]; //氏名
+$number = $_POST["number"]; //学生番号
+$history = $_POST["history"]; //略歴
+$goal = $_POST["goal"]; //成し遂げたいこと
+$likes = $_POST["likes"]; //趣味・好きなこと
 
 // FileUpload処理
 $upload = "../img/"; //画像アップロードフォルダへのパス
@@ -59,13 +64,13 @@ try{
 // 4. データ登録SQL作成 
 //-------------------------------------------
 $stmt = $pdo->prepare("INSERT INTO member_profile_table(
-    id, item, category, value, fname, description, indate)VALUES(
-        NULL, :item, :category, :value, :fname, :description, sysdate())");
-$stmt->bindValue(':item', $item, PDO::PARAM_STR);
-$stmt->bindValue(':category', $category, PDO::PARAM_STR);
-$stmt->bindValue(':value', $value, PDO::PARAM_INT);
+    id, name, history, number, goal, fname, indate)VALUES(
+        NULL, :name, :history, :number, :goal, :fname, sysdate())");
+$stmt->bindValue(':name', $item, PDO::PARAM_STR);
+$stmt->bindValue(':history', $category, PDO::PARAM_STR);
+$stmt->bindValue(':number', $value, PDO::PARAM_INT);
+$stmt->bindValue(':goal', $goal, PDO::PARAM_STR);
 $stmt->bindValue(':fname', $fname, PDO::PARAM_STR);
-$stmt->bindValue(':description', $description, PDO::PARAM_STR);
 $status = $stmt->execute();
 
 //-------------------------------------------
