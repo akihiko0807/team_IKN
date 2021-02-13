@@ -41,7 +41,7 @@ $pdo = db_connect();
                 <dt>お名前</dt>
                 <dd><input type="text" name="name" placeholder="氏名を入力" class="cms-item"></dd>
                 <dt>学生番号</dt>
-                <dd><input type="text" name="nunber" placeholder="学生番号を入力（わからない場合は空欄）" class="cms-item"></dd>
+                <dd><input type="text" name="number" placeholder="学生番号を入力（わからない場合は空欄）" class="cms-item"></dd>
                 <dt>略歴</dt>
                 <dd><textarea name="history" cols="30" rows="10" placeholder="学歴・職歴を簡単にご紹介ください" class="cms-item"></textarea></dd>
                 <dt>G'sで成し遂げたいこと</dt>
