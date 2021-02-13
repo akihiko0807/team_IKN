@@ -43,7 +43,7 @@ function getItems( $query ){
             $view .=          '<p class="products-text item-category">'.$res['history'].'</p>';
             $view .=       '</li>';
             $view .=       '<li class="item-contents-lower">';
-            $view .=          '<p class="products-text item-price">¥'.$res['number'].'</p>';
+            $view .=          '<p class="products-text item-price">学生番号:'.$res['number'].'</p>';
             $view .=       '</li>';
             $view .=       '<li class="item-contents-buttons">';
             $view .=          '<a href="#" class="btn-update">編集</a>';
