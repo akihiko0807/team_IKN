@@ -38,9 +38,9 @@ if($status==false){
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style_main.css">
+    <link rel="stylesheet" href="./css/style_csm.css">
 </head>
 <body class="cms">
 
@@ -56,15 +56,10 @@ if($status==false){
                 <h1 class="item-name"><?=$row["name"]?></h1>
                 <p class="item-category"><?=$row["history"]?></p>
                 <p class="item-price"><?=$row["number"]?></p>
-                <p><input type="number" value="1" name="num" class="cartin-number"></p>
-            </div>
-            <!--カートボタン-->
-            <div class="flex-parent item-label">
-                <input type="submit" class="btn-cartin" value="カートに入れる">
             </div>
             <!--商品詳細情報-->
             <div class="flex-parent item-label">
-                <p class="item-text"><?=$row["goal"]?></p>
+                <p class="item-text">わたしのゴールは<?=$row["goal"]?></p>
             </div>
 
             <!--ワザ：ここでは隠して、cartページに値を飛ばす-->

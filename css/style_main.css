@@ -199,3 +199,8 @@ h1 {
 .copyrights {
   font-size: 15px;
 }
+
+.wrapper-item{
+  width: 300px;
+  margin: 0 auto;
+}
