@@ -10,17 +10,17 @@ $pdo = db_connect();
 <head>
     <meta charset="UTF-8">
     <title>登録画面</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style_csm.css">
+    <!-- <link rel="stylesheet" href="../css/jquery.bxslider.css"> -->
 </head>
 <body class="cms">
 
 <!-- header -->
-<header class="header">
+<!-- <header class="header">
     <p class="site-title"><a href="index.php"><img 
-    src="../img/common/gslogo.png" alt="G's Academy Tokyo"></a></p>
-</header>
+    src="./img/gslogo.jpg" alt="G's Academy Tokyo"></a></p>
+</header> -->
 
 <!-- end header-->
 
@@ -34,7 +34,7 @@ $pdo = db_connect();
 
             <!--個人情報-->
             <!-- id, name, history, number, goal , fname, indate -->
-            <p class="cms-thumb"><img src="hoge" wodth="200"></p>
+            <!-- <p class="cms-thumb"><img src="hoge" wodth="200"></p> -->
             <dl class="cms-list">
                 <dt>ご自身の画像</dt>
                 <dd><input type="file" name="fname" class="cms-item" acccept="image/*"></dd>
