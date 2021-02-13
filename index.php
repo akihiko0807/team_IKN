@@ -39,11 +39,11 @@ function getItems( $query ){
             $view .=          '<p><img class="item-thub" src="./img/'.$res['fname'].'" alt=""></p>';
             $view .=       '</li>';
             $view .=       '<li class="item-contents-middle">';
-            $view .=          '<p class="products-text item-title">'.$res['item'].'</p>';
-            $view .=          '<p class="products-text item-category">'.$res['category'].'</p>';
+            $view .=          '<p class="products-text item-title">'.$res['name'].'</p>';
+            $view .=          '<p class="products-text item-category">'.$res['history'].'</p>';
             $view .=       '</li>';
             $view .=       '<li class="item-contents-lower">';
-            $view .=          '<p class="products-text item-price">¥'.$res['value'].'</p>';
+            $view .=          '<p class="products-text item-price">¥'.$res['number'].'</p>';
             $view .=       '</li>';
             $view .=     '</ul>';
             $view .= '</a>';
@@ -60,48 +60,13 @@ if( !isset($_SESSION["results"])||$_SESSION["results"] != "" ){
     $_SESSION["results"] = "";
 }
 
-/*
-// 1. DB接続
-$pdo = db_connect();
-
-// 2.データ抽出SQL作成
-$stmt = $pdo->prepare("SELECT * FROM ec_table");
-$status = $stmt->execute();
-
-// 3.データ表示
-$view="";
-if($status==false){
-    $error = $stmt->errorInfo();
-    exit("ErrorQuery".$error[2]);
-}else{
-    //SELECTデータの数だけ自動でループしてくれる
-    while( $res = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $view .= '<div class="item-container">';
-        $view .= '<a href="item.php?id='.$res["id"].'" style="text-decoration: none;">';
-        $view .=    '<ul class="item-contents">';
-        $view .=       '<li class="item-contents-upper">';
-        $view .=          '<p><img class="item-thub" src="./img/'.$res['fname'].'" alt=""></p>';
-        $view .=       '</li>';
-        $view .=       '<li class="item-contents-middle">';
-        $view .=          '<p class="products-text item-title">'.$res['item'].'</p>';
-        $view .=          '<p class="products-text item-category">'.$res['category'].'</p>';
-        $view .=       '</li>';
-        $view .=       '<li class="item-contents-lower">';
-        $view .=          '<p class="products-text item-price">¥'.$res['value'].'</p>';
-        $view .=       '</li>';
-        $view .=     '</ul>';
-        $view .= '</a>';
-        $view .= '</div>';
-    }
-}
-*/
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>G's Members</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style_main.css">
 </head>
