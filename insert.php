@@ -20,9 +20,9 @@ if(!isset($_POST["goal"]) || $_POST["goal"]==""){
     exit("Param Error!: goal");
 }
 //受信チェック:likes
-if(!isset($_POST["likes"]) || $_POST["likes"]==""){
-    exit("Param Error!: likes");
-}
+// if(!isset($_POST["likes"]) || $_POST["likes"]==""){
+//     exit("Param Error!: likes");
+// }
 //ファイル受信チェック 受信チェック ※$_FILES["*****"]["name"]の場合
 if(!isset($_FILES["fname"]["name"]) || $_FILES["fname"]["name"]==""){
     exit("Param Error!: files");
