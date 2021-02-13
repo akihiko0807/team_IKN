@@ -9,24 +9,24 @@ $pdo = db_connect();
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>アイテム登録画面</title>
+    <title>登録画面</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/jquery.bxslider.css">
 </head>
 <body class="cms">
 
-<!-- header
-    <header class="header">
-        <p class="site-title"><a href="../index.php"><img 
-        src="../img/common/logo.png" alt="G's Academy Tokyo"></a></p>
-    </header>
+<!-- header -->
+<header class="header">
+    <p class="site-title"><a href="index.php"><img 
+    src="../img/common/gslogo.png" alt="G's Academy Tokyo"></a></p>
+</header>
 
-end header-->
+<!-- end header-->
 
     <div class="outer">
-    <h1 class="page-title page-title_cms">商品登録</h1>
-        <!--商品本情報-->
+    <h1 class="page-title page-title_cms">個人情報登録</h1>
+        <!--個人情報-->
         <div class="wrapper wrapper-cms">
             <!--商品選択フォーム-->
             <form action="insert.php" method="post" class="flex-parent cart cms-area"
@@ -37,8 +37,8 @@ end header-->
             <dl class="cms-list">
                 <dt>画像</dt>
                 <dd><input type="file" name="fname" class="cms-item" acccept="image/*"></dd>
-                <dt>商品名</dt>
-                <dd><input type="text" name="item" placeholder="商品名を入力" class="cms-item"></dd>
+                <dt>名前</dt>
+                <dd><input type="text" name="item" placeholder="氏名を入力" class="cms-item"></dd>
                 <dt>カテゴリ</dt>
                 <dd>
                     <select name="category" class="cms-item">
@@ -67,18 +67,6 @@ end header-->
             <!--end 商品情報-->
 
             <input type="submit" id="btn-update" value="登録">
-
-            <!--
-            <ul class="btn-list btn_list_cms">
-                <li class="">
-                    <a href="./" class="btn-back">戻る</a>
-                </li>
-                <li class="btn-calculate">
-                    <input type="submit" id="btn-update" value="登録">
-                </li>
-            </ul>
-            -->
-
             </form>
             <!--end 商品選択フォーム-->
         </div>
