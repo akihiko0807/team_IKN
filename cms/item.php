@@ -68,17 +68,6 @@ end header-->
 
             <input type="submit" id="btn-update" value="登録">
 
-            <!--
-            <ul class="btn-list btn_list_cms">
-                <li class="">
-                    <a href="./" class="btn-back">戻る</a>
-                </li>
-                <li class="btn-calculate">
-                    <input type="submit" id="btn-update" value="登録">
-                </li>
-            </ul>
-            -->
-
             </form>
             <!--end 商品選択フォーム-->
         </div>

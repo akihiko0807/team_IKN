@@ -44,14 +44,6 @@ if($status==false){
 </head>
 <body class="cms">
 
-<!-- header
-    <header class="header">
-        <p class="site-title"><a href="../index.php"><img 
-        src="../img/common/logo.png" alt="G's Academy Tokyo"></a></p>
-        <a href="cart.pho" class="btn btn-cart"><img src="./img/cart.png" alt="G's Academy Tokyo"></a>
-        <a href="#" class="btn btn-menu"><img src="./img/menu.png" alt=""></a>
-    </header>
-end header-->
 <form action="cartadd.php" method="POST">
     <div class="outer">
         <!--商品本情報-->
@@ -62,8 +54,8 @@ end header-->
             <p class="item-thumb"><img src="./img/<?=$row["fname"]?>" width="200"></p>
             <div class="flex-parent item-label">
                 <h1 class="item-name"><?=$row["name"]?></h1>
-                <p class="item-category"><?=$row["like"]?></p>
-                <p class="item-price"><?=$row["value"]?></p>
+                <p class="item-category"><?=$row["history"]?></p>
+                <p class="item-price"><?=$row["number"]?></p>
                 <p><input type="number" value="1" name="num" class="cartin-number"></p>
             </div>
             <!--カートボタン-->
@@ -77,8 +69,8 @@ end header-->
 
             <!--ワザ：ここでは隠して、cartページに値を飛ばす-->
             <input type="hidden" name="item" value="<?=$row["name"]?>" >
-            <input type="hidden" name="category" value="<?=$row["category"]?>" >
-            <input type="hidden" name="value" value="<?=$row["value"]?>" >
+            <input type="hidden" name="category" value="<?=$row["history"]?>" >
+            <input type="hidden" name="value" value="<?=$row["number"]?>" >
             <input type="hidden" name="id" value="<?=$row["id"]?>" >
             <input type="hidden" name="fname" value="<?=$row["fname"]?>" >
             </main>
