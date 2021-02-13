@@ -13,7 +13,7 @@ try{
 }
 
 // 2.データ登録SQL作成
-$query = "SELECT * FROM ec_user_table WHERE u_id = :lid AND u_pw = :lpw";
+$query = "SELECT * FROM login_user_table WHERE u_id = :lid AND u_pw = :lpw";
 $stmt = $pdo->prepare($query);
 $stmt->bindValue(':lid', $lid);
 $stmt->bindValue(':lpw', $lpw);

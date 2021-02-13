@@ -58,7 +58,7 @@ try{
 //-------------------------------------------
 // 4. データ登録SQL作成 
 //-------------------------------------------
-$stmt = $pdo->prepare("INSERT INTO ec_table(
+$stmt = $pdo->prepare("INSERT INTO member_profile_table(
     id, item, category, value, fname, description, indate)VALUES(
         NULL, :item, :category, :value, :fname, :description, sysdate())");
 $stmt->bindValue(':item', $item, PDO::PARAM_STR);
