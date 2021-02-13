@@ -119,6 +119,14 @@ if($status==false){
             </div>
             <nav>
                 <ul>
+                    <li id="registration">
+                        <div class="header-menu registration">
+                            <a href="./registration.php">
+                            <img src="./img/common/registration-icon.png" class="fig-header-menu">
+                            <p class="header-menu-text">登録画面へ</p>
+                            </a>
+                        </div>
+                    </li>
                     <li id="admin">
                         <div class="header-menu admin" visibility="hidden">
                             <a href="./cms/item_list.php">
@@ -139,44 +147,6 @@ if($status==false){
     <!--end header-->
 
     <div class="outer">
-            <div class="side-menu-filter-list">
-                <h2 class="side-menu-title">カテゴリ</h2>
-                <form name="form_filter" action="./select.php" method="post">
-                <ul>
-                    <li><input type="checkbox" name="category[]" value="'Hazy IPA', 'New England IPA'">Hazy, NE-IPA</li>
-                    <li><input type="checkbox" name="category[]" value="'Pale Ale', 'American Pale Ale', 'Session IPA','IPA'">Pale Ale系</li>
-                    <li><input type="checkbox" name="category[]" value="'Lager', 'Pils', 'Pilsner', 'Indian Pale Lager'">Pilsner, Lager</li>
-                    <li><input type="checkbox" name="category[]" value="'Saison', 'Wheat Ale', 'White Ale', 'Belgian White'">Season, White Ale</li>
-                    <li><input type="checkbox" name="category[]" value="'Porter'">Porter, Brown Ale</li>
-                </ul>
-            </div>
-<!--
-            <div class="side-menu-filter-list">
-                <h2 class="side-menu-title">ブルワリー</h2>
-                <ul>
-                    <li>ヤッホーブリューイング</li>
-                    <li>DHC</li>
-                    <li>Coedo</li>
-                    <li>BrewDog</li>
-                    <li>伊勢角屋</li>
-                    <li>うちゅうブリューイング</li>
-                </ul>
-            </div>
--->
-            <div class="side-menu-filter-list">
-                <h2 class="side-menu-title">価格帯</h2>
-                
-                <ul>
-                    <li><input type="radio" name="max_price" value="350">〜 ¥350</li>
-                    <li><input type="radio" name="max_price" value="400">〜 ¥400</li>
-                    <li><input type="radio" name="max_price" value="500">〜 ¥500</li>
-                    <li><input type="radio" name="max_price" value="600">〜 ¥600</li>
-                    <li><input type="radio" name="max_price" value="9999">¥600 〜</li>
-                </ul>
-            </div>
-            <input type="submit" id="btn-filter" value="この条件で検索する">
-            </form>
-        </div>
         <div class="main-item-list">
             <div class="wrapper wrapper-main flex-parent">
                 <main class="wrapper-main">
