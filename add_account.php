@@ -34,7 +34,7 @@ $pdo = db_connect();
 //-------------------------------------------
 // 4. データ登録SQL作成 
 //-------------------------------------------
-$stmt = $pdo->prepare("INSERT INTO ec_user_table(
+$stmt = $pdo->prepare("INSERT INTO login_user_table(
     id, u_name, u_id, u_pw, is_admin, indate)VALUES(
         id, :u_name, :u_id, :u_pw, :is_admin, sysdate())");
 $stmt->bindValue(':u_name', $name, PDO::PARAM_STR);
