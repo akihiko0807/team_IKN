@@ -32,39 +32,24 @@ $pdo = db_connect();
             <form action="insert.php" method="post" class="flex-parent cart cms-area"
             enctype="multipart/form-data">
 
-            <!--商品情報-->
+            <!--個人情報-->
+            <!-- id, name, history, number, goal , fname, indate -->
             <p class="cms-thumb"><img src="hoge" wodth="200"></p>
             <dl class="cms-list">
-                <dt>画像</dt>
+                <dt>ご自身の画像</dt>
                 <dd><input type="file" name="fname" class="cms-item" acccept="image/*"></dd>
-                <dt>名前</dt>
-                <dd><input type="text" name="item" placeholder="氏名を入力" class="cms-item"></dd>
-                <dt>カテゴリ</dt>
-                <dd>
-                    <select name="category" class="cms-item">
-                        <option value="Pale Ale">Pale Ale</option>
-                        <option value="Wheat Ale">Wheat Ale</option>
-                        <option value="American Pale Ale">American Pale Ale</option>
-                        <option value="IPA">IPA</option>
-                        <option value="Hazy IPA">Hazy IPA</option>
-                        <option value="New England IPA">New England IPA</option>
-                        <option value="Session IPA">Session IPA</option>
-                        <option value="Lager">Lager</option>
-                        <option value="Indian Pale Lager">Indian Pale Lager</option>
-                        <option value="Pils">Pils</option>
-                        <option value="Pilsner">Pilsner</option>
-                        <option value="Saison">Saison</option>
-                        <option value="Belgian White">Belgian White</option>
-                        <option value="White Ale">White Ale</option>
-                        <option value="Porter">Porter</option>
-                    </select>
-                </dd>
-                <dt>金額</dt>
-                <dd><input type="text" name="value" placeholder="金額を入力" class="cms-item"></dd>
-                <dt>商品紹介文</dt>
-                <dd><textarea name="description" id="" cols="30" rows="10" placeholder="商品紹介文を入力" class="cms-item"></textarea></dd>
+                <dt>お名前</dt>
+                <dd><input type="text" name="name" placeholder="氏名を入力" class="cms-item"></dd>
+                <dt>学生番号</dt>
+                <dd><input type="text" name="nunber" placeholder="学生番号を入力（わからない場合は空欄）" class="cms-item"></dd>
+                <dt>略歴</dt>
+                <dd><textarea name="history" cols="30" rows="10" placeholder="学歴・職歴を簡単にご紹介ください" class="cms-item"></textarea></dd>
+                <dt>G'sで成し遂げたいこと</dt>
+                <dd><textarea name="goal" id="" cols="30" rows="10" placeholder="意気込みを！" class="cms-item"></textarea></dd>
+                <dt>趣味・好きなこと</dt>
+                <dd><textarea name="likes" id="" cols="30" rows="10" class="cms-item"></textarea></dd>
             </dl>
-            <!--end 商品情報-->
+            <!--end 個人情報-->
 
             <input type="submit" id="btn-update" value="登録">
             </form>
