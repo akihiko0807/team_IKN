@@ -66,9 +66,9 @@ try{
 $stmt = $pdo->prepare("INSERT INTO member_profile_table(
     id, name, history, number, goal, fname, indate)VALUES(
         NULL, :name, :history, :number, :goal, :fname, sysdate())");
-$stmt->bindValue(':name', $item, PDO::PARAM_STR);
-$stmt->bindValue(':history', $category, PDO::PARAM_STR);
-$stmt->bindValue(':number', $value, PDO::PARAM_INT);
+$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+$stmt->bindValue(':history', $history, PDO::PARAM_STR);
+$stmt->bindValue(':number', $number, PDO::PARAM_INT);
 $stmt->bindValue(':goal', $goal, PDO::PARAM_STR);
 $stmt->bindValue(':fname', $fname, PDO::PARAM_STR);
 $status = $stmt->execute();
