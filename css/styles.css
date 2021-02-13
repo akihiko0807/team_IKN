@@ -1,3 +1,13 @@
 h1{
   color: red;
 }
+
+#div_prof_komine{
+  display: flex;
+  font-weight: bold;
+  color: blue;
+}
+
+#text_komine{
+  margin-left: 50px;
+}
